@@ -23,8 +23,8 @@ A function called withdraw(), which withdraws funds from a SimpleDeFi applicatio
 A new type called SimpleDeFi, which inherits from DeFi and adds the ability to lend and borrow money.\ 
 A new type called LendingPool, which represents a lending pool that allows users to deposit and borrow money.\
 A function called deposit_to_lending_pool(), which deposits money into a lending pool.\
-<<<<<<< HEAD
+
 A function called withdraw_from_lending_pool(), which withdraws money from a lending pool.\
-=======
+
 A function called withdraw_from_lending_pool(), which withdraws money from a lending pool.\
->>>>>>> refs/remotes/origin/main
+
