@@ -1,30 +1,54 @@
-# suimorecoin
-my own coin with more features in the future
+# SuiMoreCoin
 
-[This is an external link to move tutorial][def]
+Custom cryptocurrency and DeFi smart contracts on the [Sui](https://sui.io) blockchain, written in Move.
 
+## Overview
 
+A collection of Move modules exploring token creation, smart contract interaction, DeFi lending pools, and proof-of-work concepts on the Sui network.
 
-[def]: https://github.com/move-language/move/blob/main/language/documentation/tutorial/README.md
+## Modules
 
-## modules
+### `mycoin.move` — Base Token
+Basic coin implementation with mint, burn, and transfer operations.
 
-### extends.move
-able to mint, burn, transfter, deploy contract, and invoke contract. \
+### `extends.move` — Smart Contract Integration
+Extends the base coin with contract deployment and invocation capabilities.
 
-### mycoin_with_smart_contracts.move
-A new type called SimpleDeFi, which inherits from DeFi.\ 
-A function called init_simple_defi(), which initializes a new SimpleDeFi application.\
-A function called deposit(), which deposits funds into a SimpleDeFi application.\
-A function called withdraw(), which withdraws funds from a SimpleDeFi application. \ 
+### `simple_defi.move` — DeFi & Lending Pool
+DeFi application with a lending pool supporting deposits, withdrawals, and borrowing with basic validation.
 
-### simple_defi.move
+| Function | Description |
+|----------|-------------|
+| `init_simple_defi()` | Initialize DeFi application |
+| `deposit()` / `withdraw()` | User fund management |
+| `init_lending_pool()` | Create lending pool |
+| `deposit_to_lending_pool()` | Deposit to pool |
+| `withdraw_from_lending_pool()` | Withdraw with validation |
 
-A new type called SimpleDeFi, which inherits from DeFi and adds the ability to lend and borrow money.\ 
-A new type called LendingPool, which represents a lending pool that allows users to deposit and borrow money.\
-A function called deposit_to_lending_pool(), which deposits money into a lending pool.\
+### `various_features.move` — Proof of Work
+Block structure with headers, transactions, and proof-of-work generation/verification.
 
-A function called withdraw_from_lending_pool(), which withdraws money from a lending pool.\
+## Tech Stack
 
-A function called withdraw_from_lending_pool(), which withdraws money from a lending pool.\
+- **Language:** [Move](https://move-language.github.io/move/)
+- **Blockchain:** [Sui Network](https://sui.io)
+- **Libraries:** Sui stdlib (`coin`, `tx_context`)
 
+## Project Structure
+
+```
+src/
+  mycoin.move            # Base token (mint, burn, transfer)
+  extends.move           # + contract deploy/invoke
+  simple_defi.move       # DeFi lending pool
+  various_features.move  # Proof-of-work blocks
+```
+
+## References
+
+- [Move Language Tutorial](https://github.com/move-language/move/blob/main/language/documentation/tutorial/README.md)
+- [Sui Documentation](https://docs.sui.io)
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
